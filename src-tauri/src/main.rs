@@ -128,12 +128,12 @@ fn listen_to_keyboard(window: Window) {
             unsafe {
                 let state = GetAsyncKeyState(VK_F11);
                 if state != 0 && !fullscreen_held {
-                    let _ = window.emit("fullscreen", ());
+                    let _ = window.set_fullscreen(!window.is_fullscreen().unwrap_or(true));
                 }
                 fullscreen_held = state != 0;
                 let state = GetAsyncKeyState(VK_F10);
                 if state != 0 && !home_held {
-                    let _ = window.emit("home", ());
+                    let _ = window.eval("document.location = \"http://localhost:1420/\";");
                 }
                 home_held = state != 0;
             }

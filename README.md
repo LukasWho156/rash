@@ -15,9 +15,3 @@ of the game page doesn't have to be parsed a second time.
 
 Press F10 at any time to return to the home page. Press F11 at any time to
 toggle fullscreen mode.
-
-## Limitations
-
-Currently, games that use `SharedArrayBuffers` are not supported, which
-unfortunately includes Games made with [Godot](https://godotengine.org/). I'm
-afraid this might be a security issue that cannot be changed easily.
