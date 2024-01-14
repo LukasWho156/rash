@@ -114,8 +114,9 @@ async fn load_game(url: String) -> Result<GameInfo, String> {
 
 /// Make the calling `window` listen to global events.
 /// 
-/// This function fires a `"home"` event when F10 is pressed and a
-/// `"fullscreen"` event when F11 is pressed. Both events have empty payloads.
+/// These events are:
+/// - F10: Return to home page.
+/// - F11: Toggle fullscreen mode.
 #[tauri::command]
 fn listen_to_keyboard(window: Window) {
     std::thread::spawn(move || {
@@ -133,6 +134,7 @@ fn listen_to_keyboard(window: Window) {
                 fullscreen_held = state != 0;
                 let state = GetAsyncKeyState(VK_F10);
                 if state != 0 && !home_held {
+                    let _ = window.set_title("Rash");
                     let _ = window.eval("document.location = \"http://localhost:1420/\";");
                 }
                 home_held = state != 0;

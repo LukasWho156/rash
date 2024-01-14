@@ -15,3 +15,12 @@ of the game page doesn't have to be parsed a second time.
 
 Press F10 at any time to return to the home page. Press F11 at any time to
 toggle fullscreen mode.
+
+## Disclaimer
+
+This is not a full-scale browser and does not necessarily implement the same
+security policies. Only use it to play games you trust.
+
+I do not have any control of third-party content viewed with this program and
+do not accept liability for any potential damages resulting from said third-
+party content.

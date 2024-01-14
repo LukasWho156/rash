@@ -7,7 +7,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "itchy_desktop",
+    "productName": "Rash",
     "version": "0.1.0"
   },
   "tauri": {
@@ -28,7 +28,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "lukaswho.itchydesktop",
+      "identifier": "lukaswho.rash",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
